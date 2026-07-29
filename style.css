@@ -1,0 +1,307 @@
+/* ===== GENERAL ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#f5f5f5;
+}
+
+/* ===== BANNER ===== */
+
+.banner{
+    width:100%;
+    display:block;
+}
+
+/* ===== MENU ===== */
+
+.menu-scroll{
+    display:flex;
+    overflow-x:auto;
+    white-space:nowrap;
+    background:#FFD400;
+}
+
+.menu-scroll::-webkit-scrollbar{
+    display:none;
+}
+
+.menu-scroll a{
+    display:inline-block;
+    padding:9px 16px;
+    text-decoration:none;
+    color:#000;
+    background:#FFD400;
+    font-size:13px;
+    font-family:Arial, sans-serif;
+    font-weight:700;      /* Bold */
+    border-right:1px solid #555;
+}
+
+.menu-scroll a:last-child{
+    border-right:none;
+}
+
+/* ===== SEARCH BOX ===== */
+
+.search-box{
+    width:95%;
+    height:38px;
+    margin:15px auto;
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 0px 12px rgba(0,0,0,0.18);
+    overflow:hidden;
+}
+
+.search-box input{
+    flex:1;
+    height:100%;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:0 16px;
+    font-size:14px;
+    color:#333;
+}
+
+.search-box button{
+    width:80px;
+    height:100%;
+    border:none;
+    background:#FFD400;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor:pointer;
+}
+
+.search-box button img{
+    width:40px;
+    height:40px;
+    display:block;
+}
+
+/* ===== SOCIAL BUTTONS ===== */
+
+.social-buttons{
+    width:93%;
+    margin:12px auto;
+}
+
+.social-buttons a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:12px;                 /* Icon और Text के बीच दूरी */
+    text-decoration:none;
+    color:#fff;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 10px;       /* बॉक्स के किनारों से स्पेस */
+    border-radius:0px;
+    margin-bottom:3px;
+    box-shadow:0 0px 0px rgba(0,0,0,.0);
+}
+
+.social-buttons a img{
+    width:24px;
+    height:24px;
+    flex-shrink:0;
+}
+
+.social-buttons a:nth-child(1){
+    background:#e62117;
+}
+
+.social-buttons a:nth-child(2){
+    background:#25D366;
+}
+
+.social-buttons a:nth-child(3){
+    background:#229ED9;
+}
+
+/* ================= QUICK LINK ================= */
+
+.quick-grid{
+    width:95%;
+    margin:10px auto;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:3px;
+}
+
+.quick-box{
+    background:#FFF8CC;              /* Fika Yellow */
+    border:1.5px solid #E2B600;      /* Light Dark Yellow */
+    border-radius:4px;
+    height:55px;                     /* सभी Box बराबर Height */
+    padding:6px;
+    box-sizing:border-box;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    text-align:center;
+    color:#000;
+    line-height:0.75;
+
+    font-family:Arial, sans-serif;
+    font-size:12px;
+    font-weight:700;
+
+    overflow:hidden;
+}
+
+/* English Text */
+
+.quick-box .english{
+    font-family:"Times New Roman", Times, serif;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+    width:100%;
+    height:30px;
+    background:#000;
+    border-bottom:1px solid rgba(255,255,255,.35);
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+}
+
+/* Left Yellow Box */
+
+.top-left{
+    min-width:95px;
+    height:22px;
+    background:#FFD400;
+    color:#000;
+    font-size:9px;           /* थोड़ा छोटा */
+    font-weight:700;          /* Bold */
+    font-family:Arial,sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:4px;
+    margin-left:5px;
+    flex-shrink:0;
+}
+
+/* Scroll Text */
+
+.top-marquee{
+    flex:1;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+    margin:0 0px;
+}
+
+/* ===== TOP MARQUEE ===== */
+
+.top-marquee{
+    flex:1;
+    height:30px;
+    overflow:hidden;
+    position:relative;
+    display:flex;
+    align-items:center;
+    margin:0 0px;
+}
+
+.marquee-track{
+    position:absolute;
+    white-space:nowrap;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    animation:scrollText 12s linear infinite;
+}
+
+@keyframes scrollText{
+    0%{
+        transform:translateX(100%);
+    }
+    100%{
+        transform:translateX(-100%);
+    }
+}
+
+/* Right */
+
+.top-right{
+    display:flex;
+    align-items:center;
+    gap:0px;
+    margin-right:6px;
+    flex-shrink:0;
+    background:#000;
+    z-index:10;
+}
+
+.top-right span{
+    margin-right:6px;
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.top-right{
+    display:flex;
+    align-items:center;
+}
+
+.top-right a{
+    display:flex;
+    align-items:center;
+    margin:0;
+    padding:0 1px;   /* आइकनों के बीच सिर्फ़ 1px का गैप */
+}
+
+.top-right img{
+    display:block;
+}
+
+/* YouTube */
+.top-right a:nth-child(2) img{
+    width:18px;
+    height:auto;
+}
+
+/* WhatsApp */
+.top-right a:nth-child(3) img{
+    width:20px;
+    height:20px;
+}
+
+/* Telegram */
+.top-right a:nth-child(4) img{
+    width:20px;
+    height:20px;
+}
+
+/* WhatsApp */
+.top-right a:nth-child(3) img{
+    width:22px;
+    height:22px;
+}
+
+/* Telegram */
+.top-right a:nth-child(4) img{
+    width:22px;
+    height:22px;
+}
